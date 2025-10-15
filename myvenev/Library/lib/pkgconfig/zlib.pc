@@ -1,0 +1,13 @@
+prefix=D:/navybias/myvenev/Library
+exec_prefix=D:/navybias/myvenev/Library
+libdir=D:/navybias/myvenev/Library/lib
+sharedlibdir=D:/navybias/myvenev/Library/lib
+includedir=D:/navybias/myvenev/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
