@@ -42,9 +42,9 @@ if uploaded_file:
     model_choice = st.selectbox("Select Model", ["Decision Tree", "Random Forest", "Multinomial NB", "Bernoulli NB"])
 
     if model_choice == "Decision Tree":
-        model = DecisionTreeClassifier(max_depth=7,min_samples_leaf=2,criterion='entropy',min_samples_split=13)
+        model = DecisionTreeClassifier(max_depth=7,min_samples_leaf=2,criterion='entropy',min_samples_split=13,class_weight='balanced')
     elif model_choice == "Random Forest":
-        model = RandomForestClassifier(n_estimators=100,max_depth=100)
+        model = RandomForestClassifier(n_estimators=100,max_depth=100,class_weight='balanced')
     elif model_choice == "Multinomial NB":
         model = MultinomialNB(alpha=1.0)
     elif model_choice == "Bernoulli NB":
